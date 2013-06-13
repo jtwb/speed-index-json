@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'json'
 
+fixture = JSON.dump "speed-index" => 8192
+
 get '/' do
-  JSON.dump test: 100
+  fixture
 end
