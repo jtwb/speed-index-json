@@ -14,10 +14,14 @@ fixture = {
 client = CirconusSpeedIndex::WPTClient.new url: 'http://www.modcloth.com/'
 
 get '/*' do
+  ## TODO should retrieve the XML result from WPT
+  ## TODO should use a local caching proxy (
+  ## TODO should accept a WPT key as config
+  ## TODO should accept hostname as config
   fixture[:path] = params[:splat].first
   JSON.dump fixture
 end
 
-get '/test' do
+get '/fire' do
   client.get_speed_index
 end
