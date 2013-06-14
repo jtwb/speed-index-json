@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 
 gem 'sinatra'
-gem 'nokogiri'
+gem 'redis'
+
+gem 'susuwatari'
 
 group :development do
   gem 'pry-debugger'
